@@ -1,50 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <!-- jQuery, Bootstrap -->
 <script src="https://code.jquery.com/jquery.min.js"></script>
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script
+
+<meta name="viewport" content="width=device-width , initial-scale=1">
+<link rel="stylesheet" href="css/reset.css">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<meta charset="UTF-8">
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+
+<script type="text/javascript" src="raty-fa-0.1.1/raty-fa-0.1.1/lib/jquery.raty-fa.js"></script>
+
+<!-- Include parse library here -->
+<script src="http://www.parsecdn.com/js/parse-1.6.0.min.js"></script>
 
 <!-- Custom files -->
 <script type="text/javascript" src="js/data.js"></script>
-<link rel="stylesheet" href="css/styles.css"/>
-
 
 <head>
-    <title>Attention to Tacobell</title>
-    <meta name="description" content="My Parse App">
-    <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-latest.js"></script>
-    <meta charset="UTF-8">
+    <title>Drunchie Digest</title>
 </head>
+
 <body>
-    <h1>Attention to Tacobell</h1>
+<nav><ul>
+    <li><a href="#cafe">Homee</a></li>
+    <li><a href="#menu">Link1</a></li>
+    <li><a href="#story">Link2</a></li>
+    <li><a href="order.html">Link3</a></li>
+</ul></nav>
+    <header>
+    <h1>DRUNCHIE DIGEST</h1>
+    </header>
     <div id="main">
-        <h1>You're ready to use Parse!</h1>
-
-        <p>Read the documentation and start building your JavaScript app:</p>
-
-        <ul>
-            <li><a href="https://www.parse.com/docs/js_guide">Parse JavaScript Guide</a></li>
-            <li><a href="https://www.parse.com/docs/js">Parse JavaScript API Documentation</a></li>
-        </ul>
-
-        <div style="display:none" class="error">
-            Looks like there was a problem saving the test object. Make sure you've set your application ID and javascript key correctly in the call to <code>Parse.initialize</code> in this file.
+        <div class="container col-md-6">
+            <h2><img id="logo" src="img/logo.png"/> Taco Bell</h2>
+            <div class="container map">
+                <img src="img/map.PNG" id="map"/>
+            </div>
         </div>
-
-        <div style="display:none" class="success">
-            <p>We've also just created your first object using the following code:</p>
-
-            <code>
-                var TestObject = Parse.Object.extend("TestObject");<br/>
-                var testObject = new TestObject();<br/>
-                testObject.save({foo: "bar"});
-            </code>
+        <div class="container col-md-6">
+            <h2>Add a Review</h2>
+            <form>
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input class="form-control" id="title" placeholder="Write your title here..."></input>
+                </div>
+                <div class="form-group">
+                    <label for="review">Review</label>
+                    <input class="form-control" id="review" placeholder="Write your review here..."></input>
+                </div>
+                <div class="form-group">
+                    <label for="rating">Rating</label>
+                    <div id="rating"></div>
+                </div>
+                <button class="btn btn-primary" type="submit">Add Review</button>
+            </form>
         </div>
     </div>
+
+    <div class="container success col-md-12 reviews">
+        <h2>Reviews</h2>
+
+        <ul id="list">
+        </ul>
+    </div>
+
 </body>
+<script type="text/javascript" src="js/data.js"></script>
 </html>
